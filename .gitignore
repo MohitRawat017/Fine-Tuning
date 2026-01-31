@@ -1,0 +1,11 @@
+.venv/
+
+# Local secrets
+.env
+.env.*
+
+# Training outputs / large artifacts
+function-gemma/functiongemma-270m-ft/
+function-gemma/merged_model/
+function-gemma/llama-3.2-3B/
+.env
