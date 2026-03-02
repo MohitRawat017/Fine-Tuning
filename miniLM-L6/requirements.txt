@@ -1,0 +1,14 @@
+# PyTorch - Deep learning framework
+torch>=2.0.0
+
+# Hugging Face Transformers - Pre-trained models and tokenizers
+transformers>=4.30.0
+
+# Scikit-learn - For train_test_split, metrics
+scikit-learn>=1.2.0
+
+# NumPy - Numerical computing
+numpy>=1.24.0
+
+# Optional: For GPU support with CUDA (uncomment if needed)
+# torch>=2.0.0+cu118 --index-url https://download.pytorch.org/whl/cu118

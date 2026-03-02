@@ -1,0 +1,6 @@
+"transformers>=4.40" 
+datasets 
+accelerate 
+peft[torch] 
+sentencepiece
+# bitsandbytes optional (for 8-bit training): pip install bitsandbytes

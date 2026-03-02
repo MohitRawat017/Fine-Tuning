@@ -1,0 +1,400 @@
+{"text": "read draft emails", "label": "communication", "label_id": 4}
+{"text": "you doing okay", "label": "casual", "label_id": 0}
+{"text": "find papers about large language models", "label": "research", "label_id": 3}
+{"text": "revert with cpu usage", "label": "system", "label_id": 2}
+{"text": "search stackoverflow for index out of bounds", "label": "research", "label_id": 3}
+{"text": "um what's my battery status", "label": "system", "label_id": 2}
+{"text": "hey um start a timer for 10 minutes please", "label": "productivity", "label_id": 1}
+{"text": "look up this error on stackoverflow", "label": "research", "label_id": 3}
+{"text": "can you set alarm for 8:45", "label": "productivity", "label_id": 1}
+{"text": "I need research papers about computer vision", "label": "research", "label_id": 3}
+{"text": "later", "label": "casual", "label_id": 0}
+{"text": "can you check my emails", "label": "communication", "label_id": 4}
+{"text": "execute the script for me", "label": "system", "label_id": 2}
+{"text": "compose message to colleague", "label": "communication", "label_id": 4}
+{"text": "hey um launch chrome", "label": "system", "label_id": 2}
+{"text": "could you compose an email to the team", "label": "communication", "label_id": 4}
+{"text": "timer uh 5 minutes", "label": "productivity", "label_id": 1}
+{"text": "new todo buy milk", "label": "productivity", "label_id": 1}
+{"text": "oh hey there", "label": "casual", "label_id": 0}
+{"text": "read the latest message", "label": "communication", "label_id": 4}
+{"text": "what's my ip address", "label": "system", "label_id": 2}
+{"text": "excute git status", "label": "system", "label_id": 2}
+{"text": "hey um read my latest mail", "label": "communication", "label_id": 4}
+{"text": "ty", "label": "casual", "label_id": 0}
+{"text": "wake me up at 7:30 sharp", "label": "productivity", "label_id": 1}
+{"text": "look up stack overflow", "label": "research", "label_id": 3}
+{"text": "run pythn script", "label": "system", "label_id": 2}
+{"text": "um time me for 10 minutes", "label": "productivity", "label_id": 1}
+{"text": "execute go run main.go", "label": "system", "label_id": 2}
+{"text": "just leave it", "label": "casual", "label_id": 0}
+{"text": "uh huh", "label": "casual", "label_id": 0}
+{"text": "I appreciate it", "label": "casual", "label_id": 0}
+{"text": "find arxiv papers about optimization", "label": "research", "label_id": 3}
+{"text": "run a shell command", "label": "system", "label_id": 2}
+{"text": "show system details", "label": "system", "label_id": 2}
+{"text": "send an email to the manager", "label": "communication", "label_id": 4}
+{"text": "hey um what's my cpu usage", "label": "system", "label_id": 2}
+{"text": "execute ls -la please", "label": "system", "label_id": 2}
+{"text": "uh run this command", "label": "system", "label_id": 2}
+{"text": "great", "label": "casual", "label_id": 0}
+{"text": "um task review code", "label": "productivity", "label_id": 1}
+{"text": "find stackoverflow solution for memory leak", "label": "research", "label_id": 3}
+{"text": "long time no talk", "label": "casual", "label_id": 0}
+{"text": "um set up a meeting at 2pm", "label": "productivity", "label_id": 1}
+{"text": "execute apt update", "label": "system", "label_id": 2}
+{"text": "I want a timer for 1 hour", "label": "productivity", "label_id": 1}
+{"text": "batery status", "label": "system", "label_id": 2}
+{"text": "find information about ai", "label": "research", "label_id": 3}
+{"text": "um check my emails", "label": "communication", "label_id": 4}
+{"text": "execute this script", "label": "system", "label_id": 2}
+{"text": "um set a timer for 25 minutes", "label": "productivity", "label_id": 1}
+{"text": "hello", "label": "casual", "label_id": 0}
+{"text": "add lunch meeting to calendar", "label": "productivity", "label_id": 1}
+{"text": "check my todo list", "label": "productivity", "label_id": 1}
+{"text": "can you um set a timer for 10 minutes", "label": "productivity", "label_id": 1}
+{"text": "hi there", "label": "casual", "label_id": 0}
+{"text": "see ya", "label": "casual", "label_id": 0}
+{"text": "find me study tips", "label": "research", "label_id": 3}
+{"text": "I need a timer for about 15 minutes", "label": "productivity", "label_id": 1}
+{"text": "execute gradle build", "label": "system", "label_id": 2}
+{"text": "goodbye", "label": "casual", "label_id": 0}
+{"text": "can you show system info", "label": "system", "label_id": 2}
+{"text": "um check my email please", "label": "communication", "label_id": 4}
+{"text": "kindly show system info", "label": "system", "label_id": 2}
+{"text": "hmm", "label": "casual", "label_id": 0}
+{"text": "could you look up papers on natural language processing", "label": "research", "label_id": 3}
+{"text": "what's my task list looking like", "label": "productivity", "label_id": 1}
+{"text": "what tasks do I have today", "label": "productivity", "label_id": 1}
+{"text": "show me my list", "label": "productivity", "label_id": 1}
+{"text": "oh wow", "label": "casual", "label_id": 0}
+{"text": "find stackoverflow solution for 404 error", "label": "research", "label_id": 3}
+{"text": "yes", "label": "casual", "label_id": 0}
+{"text": "set timer to 20 minutes", "label": "productivity", "label_id": 1}
+{"text": "how's everything going", "label": "casual", "label_id": 0}
+{"text": "send an email fast", "label": "communication", "label_id": 4}
+{"text": "send mail fast", "label": "communication", "label_id": 4}
+{"text": "could you check stackoverflow for python dict error", "label": "research", "label_id": 3}
+{"text": "send message to coworker", "label": "communication", "label_id": 4}
+{"text": "execute the command", "label": "system", "label_id": 2}
+{"text": "run maven clean install", "label": "system", "label_id": 2}
+{"text": "um thanks", "label": "casual", "label_id": 0}
+{"text": "hey um search how to make pasta", "label": "research", "label_id": 3}
+{"text": "all good", "label": "casual", "label_id": 0}
+{"text": "start command prompt", "label": "system", "label_id": 2}
+{"text": "can you um open spotify", "label": "system", "label_id": 2}
+{"text": "show trash emails", "label": "communication", "label_id": 4}
+{"text": "uh look up javascript", "label": "research", "label_id": 3}
+{"text": "cheers", "label": "casual", "label_id": 0}
+{"text": "show my mails", "label": "communication", "label_id": 4}
+{"text": "hey open terminal", "label": "system", "label_id": 2}
+{"text": "execute this bash script", "label": "system", "label_id": 2}
+{"text": "send message to group", "label": "communication", "label_id": 4}
+{"text": "phew", "label": "casual", "label_id": 0}
+{"text": "nope", "label": "casual", "label_id": 0}
+{"text": "email my professor", "label": "communication", "label_id": 4}
+{"text": "can you search stackoverflow for typeerror", "label": "research", "label_id": 3}
+{"text": "check personal emails", "label": "communication", "label_id": 4}
+{"text": "so hey", "label": "casual", "label_id": 0}
+{"text": "find academic research on sentiment analysis", "label": "research", "label_id": 3}
+{"text": "hey um new task call my mom", "label": "productivity", "label_id": 1}
+{"text": "check stackoverflow for pandas dataframe error", "label": "research", "label_id": 3}
+{"text": "I need to see my task list", "label": "productivity", "label_id": 1}
+{"text": "read emails from team", "label": "communication", "label_id": 4}
+{"text": "good morning", "label": "casual", "label_id": 0}
+{"text": "check inbox for me", "label": "communication", "label_id": 4}
+{"text": "see you", "label": "casual", "label_id": 0}
+{"text": "send mail to school", "label": "communication", "label_id": 4}
+{"text": "computer information", "label": "system", "label_id": 2}
+{"text": "show me my inbox", "label": "communication", "label_id": 4}
+{"text": "timer for 2 minutes please", "label": "productivity", "label_id": 1}
+{"text": "schedle call with team", "label": "productivity", "label_id": 1}
+{"text": "read recent emails", "label": "communication", "label_id": 4}
+{"text": "how's life treating you", "label": "casual", "label_id": 0}
+{"text": "start finder", "label": "system", "label_id": 2}
+{"text": "check the system", "label": "system", "label_id": 2}
+{"text": "find papers on arxiv", "label": "research", "label_id": 3}
+{"text": "look up stackoverflow for docker compose error", "label": "research", "label_id": 3}
+{"text": "um find arxiv papers about gpt", "label": "research", "label_id": 3}
+{"text": "okay", "label": "casual", "label_id": 0}
+{"text": "check for new messages", "label": "communication", "label_id": 4}
+{"text": "what's my cpu load", "label": "system", "label_id": 2}
+{"text": "start microsoft teams", "label": "system", "label_id": 2}
+{"text": "good afternoon", "label": "casual", "label_id": 0}
+{"text": "start my browser", "label": "system", "label_id": 2}
+{"text": "book a time slot for 11am", "label": "productivity", "label_id": 1}
+{"text": "it's fine really", "label": "casual", "label_id": 0}
+{"text": "I need to remember to finish the report", "label": "productivity", "label_id": 1}
+{"text": "look up research on quantum computing", "label": "research", "label_id": 3}
+{"text": "task submit my assignment please", "label": "productivity", "label_id": 1}
+{"text": "uh mail sarah", "label": "communication", "label_id": 4}
+{"text": "can you mail the report", "label": "communication", "label_id": 4}
+{"text": "email the hotel for booking", "label": "communication", "label_id": 4}
+{"text": "search how to fix a flat tire", "label": "research", "label_id": 3}
+{"text": "can you send mail to support", "label": "communication", "label_id": 4}
+{"text": "search arxiv for robotics papers", "label": "research", "label_id": 3}
+{"text": "look up how to learn guitar", "label": "research", "label_id": 3}
+{"text": "compose email to landlord", "label": "communication", "label_id": 4}
+{"text": "find stackoverflow for null error", "label": "research", "label_id": 3}
+{"text": "I need to see my inbox", "label": "communication", "label_id": 4}
+{"text": "revert with search results", "label": "research", "label_id": 3}
+{"text": "search for coding interview questions", "label": "research", "label_id": 3}
+{"text": "send a quick email to lisa", "label": "communication", "label_id": 4}
+{"text": "check email notifications", "label": "communication", "label_id": 4}
+{"text": "hey um email sarah about the meeting", "label": "communication", "label_id": 4}
+{"text": "talk to you later", "label": "casual", "label_id": 0}
+{"text": "open code editor please", "label": "system", "label_id": 2}
+{"text": "I have to call the dentist", "label": "productivity", "label_id": 1}
+{"text": "show my mail", "label": "communication", "label_id": 4}
+{"text": "start slack for me", "label": "system", "label_id": 2}
+{"text": "run that command please", "label": "system", "label_id": 2}
+{"text": "I have to wake up at 6:15", "label": "productivity", "label_id": 1}
+{"text": "book meting tomorrow", "label": "productivity", "label_id": 1}
+{"text": "what's up", "label": "casual", "label_id": 0}
+{"text": "start timmer for 20 min", "label": "productivity", "label_id": 1}
+{"text": "skip it", "label": "casual", "label_id": 0}
+{"text": "let's do a timer for 45 minutes", "label": "productivity", "label_id": 1}
+{"text": "open control panel", "label": "system", "label_id": 2}
+{"text": "uh wake me up at 6", "label": "productivity", "label_id": 1}
+{"text": "add daily standup at 9:30", "label": "productivity", "label_id": 1}
+{"text": "could you book a meeting for tomorrow", "label": "productivity", "label_id": 1}
+{"text": "mail the meeting minutes", "label": "communication", "label_id": 4}
+{"text": "I need to send a mail to my boss", "label": "communication", "label_id": 4}
+{"text": "what are my computer specs", "label": "system", "label_id": 2}
+{"text": "find stackoverflow answer for numpy error", "label": "research", "label_id": 3}
+{"text": "create calendar entry for 3pm", "label": "productivity", "label_id": 1}
+{"text": "hey alarm at 8", "label": "productivity", "label_id": 1}
+{"text": "show mem usage", "label": "system", "label_id": 2}
+{"text": "check for replies", "label": "communication", "label_id": 4}
+{"text": "hey um find stackoverflow results for react error", "label": "research", "label_id": 3}
+{"text": "can you wake me up at 7 tomorrow", "label": "productivity", "label_id": 1}
+{"text": "put this meeting on my calendar", "label": "productivity", "label_id": 1}
+{"text": "compose email to customer service", "label": "communication", "label_id": 4}
+{"text": "show all new messages", "label": "communication", "label_id": 4}
+{"text": "that's fine", "label": "casual", "label_id": 0}
+{"text": "could you list my tasks please", "label": "productivity", "label_id": 1}
+{"text": "start steam", "label": "system", "label_id": 2}
+{"text": "email regarding the job application", "label": "communication", "label_id": 4}
+{"text": "much appreciated", "label": "casual", "label_id": 0}
+{"text": "read latest mail", "label": "communication", "label_id": 4}
+{"text": "what's my cpu temperature", "label": "system", "label_id": 2}
+{"text": "launch safari", "label": "system", "label_id": 2}
+{"text": "display my tasks for me", "label": "productivity", "label_id": 1}
+{"text": "oh okay", "label": "casual", "label_id": 0}
+{"text": "thanks", "label": "casual", "label_id": 0}
+{"text": "could you open the terminal", "label": "system", "label_id": 2}
+{"text": "compose mail to hr", "label": "communication", "label_id": 4}
+{"text": "start a 30 minute timer would you", "label": "productivity", "label_id": 1}
+{"text": "uh launch chrome", "label": "system", "label_id": 2}
+{"text": "I need to add an event to my calendar", "label": "productivity", "label_id": 1}
+{"text": "email the restaurant for reservation", "label": "communication", "label_id": 4}
+{"text": "yep", "label": "casual", "label_id": 0}
+{"text": "um show me what I need to do", "label": "productivity", "label_id": 1}
+{"text": "sounds good", "label": "casual", "label_id": 0}
+{"text": "how have you been", "label": "casual", "label_id": 0}
+{"text": "um search for best laptops 2024", "label": "research", "label_id": 3}
+{"text": "search for movie recommendations", "label": "research", "label_id": 3}
+{"text": "start microsoft word", "label": "system", "label_id": 2}
+{"text": "find stackoverflow for undefined variable", "label": "research", "label_id": 3}
+{"text": "can you look up docker commands", "label": "research", "label_id": 3}
+{"text": "can you read latest email", "label": "communication", "label_id": 4}
+{"text": "can you um search stackoverflow", "label": "research", "label_id": 3}
+{"text": "I need to get up by 5 am", "label": "productivity", "label_id": 1}
+{"text": "compose email to recruiter", "label": "communication", "label_id": 4}
+{"text": "search stackoverflow for ssl certificate error", "label": "research", "label_id": 3}
+{"text": "run this for me please", "label": "system", "label_id": 2}
+{"text": "task for me read the docs", "label": "productivity", "label_id": 1}
+{"text": "yea", "label": "casual", "label_id": 0}
+{"text": "I have a meeting at 4 please add it", "label": "productivity", "label_id": 1}
+{"text": "perfect", "label": "casual", "label_id": 0}
+{"text": "search arxiv for reinforcement learning", "label": "research", "label_id": 3}
+{"text": "show my pending items", "label": "productivity", "label_id": 1}
+{"text": "read archived mail", "label": "communication", "label_id": 4}
+{"text": "oops", "label": "casual", "label_id": 0}
+{"text": "look up papers on graph neural networks", "label": "research", "label_id": 3}
+{"text": "show my taks please", "label": "productivity", "label_id": 1}
+{"text": "ttyl", "label": "casual", "label_id": 0}
+{"text": "can you find papers on neural networks", "label": "research", "label_id": 3}
+{"text": "well hello", "label": "casual", "label_id": 0}
+{"text": "how are you doing today", "label": "casual", "label_id": 0}
+{"text": "what's new with you", "label": "casual", "label_id": 0}
+{"text": "excecute npm start", "label": "system", "label_id": 2}
+{"text": "look up typescript documentation", "label": "research", "label_id": 3}
+{"text": "could you look up the weather in New York", "label": "research", "label_id": 3}
+{"text": "um send email to john", "label": "communication", "label_id": 4}
+{"text": "never mind", "label": "casual", "label_id": 0}
+{"text": "open zoom for me", "label": "system", "label_id": 2}
+{"text": "what's going on", "label": "casual", "label_id": 0}
+{"text": "check all folders", "label": "communication", "label_id": 4}
+{"text": "find academic papers on deep learning", "label": "research", "label_id": 3}
+{"text": "add a task called workout", "label": "productivity", "label_id": 1}
+{"text": "launch task manager", "label": "system", "label_id": 2}
+{"text": "how are things", "label": "casual", "label_id": 0}
+{"text": "look up papers about knowledge graphs", "label": "research", "label_id": 3}
+{"text": "it's okay", "label": "casual", "label_id": 0}
+{"text": "launch web browser", "label": "system", "label_id": 2}
+{"text": "wow", "label": "casual", "label_id": 0}
+{"text": "check for any new mail", "label": "communication", "label_id": 4}
+{"text": "send mail to", "label": "communication", "label_id": 4}
+{"text": "launch photoshop", "label": "system", "label_id": 2}
+{"text": "take care", "label": "casual", "label_id": 0}
+{"text": "can you search arxiv for diffusion models", "label": "research", "label_id": 3}
+{"text": "find me docs on react hooks", "label": "research", "label_id": 3}
+{"text": "find research on speech recognition", "label": "research", "label_id": 3}
+{"text": "email dad about dinner", "label": "communication", "label_id": 4}
+{"text": "look up arxiv", "label": "research", "label_id": 3}
+{"text": "need alarm for early tomorrow", "label": "productivity", "label_id": 1}
+{"text": "read mail from sarah", "label": "communication", "label_id": 4}
+{"text": "create a task for tomorrow", "label": "productivity", "label_id": 1}
+{"text": "set a morning alarm for 9", "label": "productivity", "label_id": 1}
+{"text": "missed talking to you", "label": "casual", "label_id": 0}
+{"text": "mail the invoice to accounting", "label": "communication", "label_id": 4}
+{"text": "so uh", "label": "casual", "label_id": 0}
+{"text": "look up history of computers", "label": "research", "label_id": 3}
+{"text": "open microsoft edge", "label": "system", "label_id": 2}
+{"text": "thanks a bunch", "label": "casual", "label_id": 0}
+{"text": "memory stats please", "label": "system", "label_id": 2}
+{"text": "howdy", "label": "casual", "label_id": 0}
+{"text": "find stackoverflow answers for async await", "label": "research", "label_id": 3}
+{"text": "run node server.js", "label": "system", "label_id": 2}
+{"text": "good to hear you", "label": "casual", "label_id": 0}
+{"text": "hiya", "label": "casual", "label_id": 0}
+{"text": "disk spce check", "label": "system", "label_id": 2}
+{"text": "hey alarm me at noon would you", "label": "productivity", "label_id": 1}
+{"text": "email my sister", "label": "communication", "label_id": 4}
+{"text": "execute kubectl get pods", "label": "system", "label_id": 2}
+{"text": "look up nearest coffee shops", "label": "research", "label_id": 3}
+{"text": "aight", "label": "casual", "label_id": 0}
+{"text": "search for travel destinations", "label": "research", "label_id": 3}
+{"text": "run this shell command", "label": "system", "label_id": 2}
+{"text": "find information about climate change", "label": "research", "label_id": 3}
+{"text": "look up who won the game yesterday", "label": "research", "label_id": 3}
+{"text": "hey find info on", "label": "research", "label_id": 3}
+{"text": "show emails from yesterday", "label": "communication", "label_id": 4}
+{"text": "execute make build for me", "label": "system", "label_id": 2}
+{"text": "search what is quantum computing", "label": "research", "label_id": 3}
+{"text": "can you create a meeting at 3 today", "label": "productivity", "label_id": 1}
+{"text": "run terraform apply", "label": "system", "label_id": 2}
+{"text": "bye", "label": "casual", "label_id": 0}
+{"text": "find arxiv papers on", "label": "research", "label_id": 3}
+{"text": "email the vendor", "label": "communication", "label_id": 4}
+{"text": "good evening", "label": "casual", "label_id": 0}
+{"text": "open chrome browser", "label": "system", "label_id": 2}
+{"text": "I need to see memory usage", "label": "system", "label_id": 2}
+{"text": "alarm at 9:30 please", "label": "productivity", "label_id": 1}
+{"text": "k", "label": "casual", "label_id": 0}
+{"text": "look up stackoverflow for database connection error", "label": "research", "label_id": 3}
+{"text": "show sent emails", "label": "communication", "label_id": 4}
+{"text": "find stackoverflow help with npm install error", "label": "research", "label_id": 3}
+{"text": "run docker compose up", "label": "system", "label_id": 2}
+{"text": "cpu usge", "label": "system", "label_id": 2}
+{"text": "check mail from support", "label": "communication", "label_id": 4}
+{"text": "nice", "label": "casual", "label_id": 0}
+{"text": "check my work emails", "label": "communication", "label_id": 4}
+{"text": "um hey", "label": "casual", "label_id": 0}
+{"text": "can you um send mail", "label": "communication", "label_id": 4}
+{"text": "put this on my list pay the bills", "label": "productivity", "label_id": 1}
+{"text": "nah", "label": "casual", "label_id": 0}
+{"text": "cool", "label": "casual", "label_id": 0}
+{"text": "ouch", "label": "casual", "label_id": 0}
+{"text": "search stackoverflow for spring boot error", "label": "research", "label_id": 3}
+{"text": "execute flutter run", "label": "system", "label_id": 2}
+{"text": "send an email to tech support", "label": "communication", "label_id": 4}
+{"text": "creat meeting at 3pm", "label": "productivity", "label_id": 1}
+{"text": "could you show my emails", "label": "communication", "label_id": 4}
+{"text": "um send email to mom", "label": "communication", "label_id": 4}
+{"text": "catch you later", "label": "casual", "label_id": 0}
+{"text": "disk usage check", "label": "system", "label_id": 2}
+{"text": "can you set a timer for like 5 minutes", "label": "productivity", "label_id": 1}
+{"text": "add this task write a blog post", "label": "productivity", "label_id": 1}
+{"text": "search stackoverflow for keyerror python", "label": "research", "label_id": 3}
+{"text": "search for research on federated learning", "label": "research", "label_id": 3}
+{"text": "wake me at 6am", "label": "productivity", "label_id": 1}
+{"text": "schedule my dentist appointment", "label": "productivity", "label_id": 1}
+{"text": "countdown 15 min please", "label": "productivity", "label_id": 1}
+{"text": "run cargo test", "label": "system", "label_id": 2}
+{"text": "send a message to david", "label": "communication", "label_id": 4}
+{"text": "alarm for quarter to 9", "label": "productivity", "label_id": 1}
+{"text": "start internet", "label": "system", "label_id": 2}
+{"text": "hey email boss", "label": "communication", "label_id": 4}
+{"text": "how much memory is left", "label": "system", "label_id": 2}
+{"text": "hey um search arxiv for transformer models", "label": "research", "label_id": 3}
+{"text": "search what time is it in London", "label": "research", "label_id": 3}
+{"text": "do the needful and send mail", "label": "communication", "label_id": 4}
+{"text": "what's my network status", "label": "system", "label_id": 2}
+{"text": "can you search stackoverflow for null pointer exception", "label": "research", "label_id": 3}
+{"text": "find arxiv papers on generative ai", "label": "research", "label_id": 3}
+{"text": "search how to meditate", "label": "research", "label_id": 3}
+{"text": "check email pls", "label": "communication", "label_id": 4}
+{"text": "sure", "label": "casual", "label_id": 0}
+{"text": "prepone and inform via mail", "label": "communication", "label_id": 4}
+{"text": "brb", "label": "casual", "label_id": 0}
+{"text": "um add to my tasks email the client", "label": "productivity", "label_id": 1}
+{"text": "can you search for python tutorials", "label": "research", "label_id": 3}
+{"text": "awesome", "label": "casual", "label_id": 0}
+{"text": "um run python script.py", "label": "system", "label_id": 2}
+{"text": "check stackoverflow for attribute error", "label": "research", "label_id": 3}
+{"text": "could you start timing 20 minutes for me", "label": "productivity", "label_id": 1}
+{"text": "what do I have to do", "label": "productivity", "label_id": 1}
+{"text": "open excel please", "label": "system", "label_id": 2}
+{"text": "yeah", "label": "casual", "label_id": 0}
+{"text": "hey it's been a while", "label": "casual", "label_id": 0}
+{"text": "check spam folder", "label": "communication", "label_id": 4}
+{"text": "kindly check emails", "label": "communication", "label_id": 4}
+{"text": "can I get a 3 minute timer", "label": "productivity", "label_id": 1}
+{"text": "run pip instal requests", "label": "system", "label_id": 2}
+{"text": "I need help with this error look on stackoverflow", "label": "research", "label_id": 3}
+{"text": "launch settings app", "label": "system", "label_id": 2}
+{"text": "can you show me my tasks", "label": "productivity", "label_id": 1}
+{"text": "find me a good restaurant nearby", "label": "research", "label_id": 3}
+{"text": "mail please", "label": "communication", "label_id": 4}
+{"text": "systm info please", "label": "system", "label_id": 2}
+{"text": "open the email client", "label": "system", "label_id": 2}
+{"text": "morning", "label": "casual", "label_id": 0}
+{"text": "find stackoverflow help with git merge conflict", "label": "research", "label_id": 3}
+{"text": "check stackoverflow for import error", "label": "research", "label_id": 3}
+{"text": "begin a 15 minute countdown", "label": "productivity", "label_id": 1}
+{"text": "forget it", "label": "casual", "label_id": 0}
+{"text": "how's it going", "label": "casual", "label_id": 0}
+{"text": "how's your day been", "label": "casual", "label_id": 0}
+{"text": "new tsk call dad", "label": "productivity", "label_id": 1}
+{"text": "tell me my pending tasks", "label": "productivity", "label_id": 1}
+{"text": "view my tasks", "label": "productivity", "label_id": 1}
+{"text": "check email from john", "label": "communication", "label_id": 4}
+{"text": "hey um schedule a call with the team", "label": "productivity", "label_id": 1}
+{"text": "yup", "label": "casual", "label_id": 0}
+{"text": "what's my ip", "label": "system", "label_id": 2}
+{"text": "um search for python", "label": "research", "label_id": 3}
+{"text": "send mail to bank", "label": "communication", "label_id": 4}
+{"text": "read the urgent mail", "label": "communication", "label_id": 4}
+{"text": "find papers about self supervised learning", "label": "research", "label_id": 3}
+{"text": "what's on my todo list", "label": "productivity", "label_id": 1}
+{"text": "alright", "label": "casual", "label_id": 0}
+{"text": "mail the subscription cancellation", "label": "communication", "label_id": 4}
+{"text": "book time for a 1pm meeting", "label": "productivity", "label_id": 1}
+{"text": "search for healthy breakfast ideas", "label": "research", "label_id": 3}
+{"text": "I need you to find information about machine learning", "label": "research", "label_id": 3}
+{"text": "create an event called team standup", "label": "productivity", "label_id": 1}
+{"text": "revert back via email", "label": "communication", "label_id": 4}
+{"text": "read emails from boss", "label": "communication", "label_id": 4}
+{"text": "hey open discord would you", "label": "system", "label_id": 2}
+{"text": "show me system information", "label": "system", "label_id": 2}
+{"text": "launch obs studio", "label": "system", "label_id": 2}
+{"text": "email to", "label": "communication", "label_id": 4}
+{"text": "search for research on recommendation systems", "label": "research", "label_id": 3}
+{"text": "do the needful and search", "label": "research", "label_id": 3}
+{"text": "check storage info", "label": "system", "label_id": 2}
+{"text": "I need an alarm at 8 am please", "label": "productivity", "label_id": 1}
+{"text": "schedule an interview at 10", "label": "productivity", "label_id": 1}
+{"text": "can you add a task to buy groceries", "label": "productivity", "label_id": 1}
+{"text": "thank you so much", "label": "casual", "label_id": 0}
+{"text": "search for papers about attention mechanism", "label": "research", "label_id": 3}
+{"text": "could you check disk space", "label": "system", "label_id": 2}
+{"text": "add task fix that bug", "label": "productivity", "label_id": 1}
+{"text": "search stackoverflow for cors issue", "label": "research", "label_id": 3}
+{"text": "search arxiv for papers", "label": "research", "label_id": 3}
+{"text": "add taks buy groceries", "label": "productivity", "label_id": 1}
+{"text": "show important emails", "label": "communication", "label_id": 4}
+{"text": "read my morning mail", "label": "communication", "label_id": 4}
+{"text": "show my specs", "label": "system", "label_id": 2}
+{"text": "can you send an email to john", "label": "communication", "label_id": 4}

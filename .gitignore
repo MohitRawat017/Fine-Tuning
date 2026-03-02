@@ -1,5 +1,18 @@
 .venv/
 
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
 # Local secrets
 .env
 .env.*
@@ -8,4 +21,23 @@
 function-gemma/functiongemma-270m-ft/
 function-gemma/merged_model/
 function-gemma/llama-3.2-3B/
-.env
+
+# FunctionGemma training outputs
+FunctionGemma/fg_finetuned_ckpt/
+
+# Generic checkpoints (any project)
+**/checkpoint-*/
+**/checkpoints/
+**/runs/
+
+# Large model / tensor files
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
