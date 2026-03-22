@@ -26,15 +26,20 @@ LABEL_TO_ACTIONS = {
 
 
 class MiniLMClassifier(nn.Module):
-    def __init__(self, num_classes=5, dropout=0.3):
+    def __init__(self, num_classes=5, dropout=0.2):
         super(MiniLMClassifier, self).__init__()
-        self.minilm = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+        self.encoder = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
         self.dropout = nn.Dropout(dropout)
         self.classifier = nn.Linear(384, num_classes)
-    
+
+    def mean_pooling(self, outputs, attention_mask):
+        last_hidden = outputs.last_hidden_state
+        mask = attention_mask.unsqueeze(-1).expand(last_hidden.size()).float()
+        return torch.sum(last_hidden * mask, 1) / torch.clamp(mask.sum(1), min=1e-9)
+
     def forward(self, input_ids, attention_mask):
-        outputs = self.minilm(input_ids=input_ids, attention_mask=attention_mask)
-        pooled = outputs.last_hidden_state[:, 0, :]
+        outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
+        pooled = self.mean_pooling(outputs, attention_mask)
         pooled = self.dropout(pooled)
         logits = self.classifier(pooled)
         return logits
@@ -49,7 +54,11 @@ class IntentClassifier:
         
         # Load model
         self.model = MiniLMClassifier(num_classes=5)
-        self.model.load_state_dict(torch.load(model_path, map_location=self.device))
+        checkpoint = torch.load(model_path, map_location=self.device)
+        if isinstance(checkpoint, dict) and "model_state_dict" in checkpoint:
+            self.model.load_state_dict(checkpoint["model_state_dict"])
+        else:
+            self.model.load_state_dict(checkpoint)
         self.model.to(self.device)
         self.model.eval()
     

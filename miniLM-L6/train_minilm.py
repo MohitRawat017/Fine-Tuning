@@ -36,7 +36,7 @@ BATCH_SIZE = 16
 EPOCHS = 5
 LEARNING_RATE = 1e-5
 MAX_LENGTH = 128
-EARLY_STOPPING_PATIENCE = 2
+EARLY_STOPPING_PATIENCE = 3
 
 DATASET_PATH = "dataset.jsonl"
 MODEL_OUTPUT = "tsuzi_intent_model.pt"
@@ -212,7 +212,7 @@ def train_epoch(model,loader,optimizer,scheduler,device):
 
     total_loss=0
 
-    loss_fn=nn.CrossEntropyLoss()
+    loss_fn=nn.CrossEntropyLoss(label_smoothing=0.05)
 
     for batch in loader:
 
@@ -342,11 +342,12 @@ def main():
     optimizer=AdamW(model.parameters(),lr=LEARNING_RATE)
 
     total_steps=len(train_loader)*EPOCHS
+    num_warmup_steps = int(0.1 * total_steps)
 
     scheduler=get_linear_schedule_with_warmup(
 
         optimizer,
-        0,
+        num_warmup_steps,
         total_steps
 
     )
