@@ -1,0 +1,8 @@
+# BGE embedding fine-tune + retrieval
+torch>=2.3.0
+transformers>=4.45.0
+numpy>=1.26.0
+tqdm>=4.66.0
+
+# Optional: much faster ANN search for larger corpora
+faiss-cpu>=1.8.0

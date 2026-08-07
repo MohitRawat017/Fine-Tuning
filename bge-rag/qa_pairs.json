@@ -1,0 +1,58 @@
+[
+  {
+    "question": "how do i fine-tune a model without much vram",
+    "positive_passage_id": 0
+  },
+  {
+    "question": "what is lora in plain terms",
+    "positive_passage_id": 0
+  },
+  {
+    "question": "why does lora use less memory",
+    "positive_passage_id": 0
+  },
+  {
+    "question": "can an 8gb gpu fine-tune llama 3.2",
+    "positive_passage_id": 1
+  },
+  {
+    "question": "what does unsloth do differently",
+    "positive_passage_id": 1
+  },
+  {
+    "question": "what is 4-bit quantization for",
+    "positive_passage_id": 1
+  },
+  {
+    "question": "how does gradient checkpointing save memory",
+    "positive_passage_id": 2
+  },
+  {
+    "question": "why do models recompute activations during training",
+    "positive_passage_id": 2
+  },
+  {
+    "question": "what is a chat template",
+    "positive_passage_id": 3
+  },
+  {
+    "question": "why does llama need a different template than qwen",
+    "positive_passage_id": 3
+  },
+  {
+    "question": "how do i turn tokens into one sentence vector",
+    "positive_passage_id": 4
+  },
+  {
+    "question": "what pooling does bge use",
+    "positive_passage_id": 4
+  },
+  {
+    "question": "how do embedding models learn to retrieve",
+    "positive_passage_id": 5
+  },
+  {
+    "question": "what is an infonce loss",
+    "positive_passage_id": 5
+  }
+]
