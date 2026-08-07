@@ -1,10 +1,8 @@
-"""
-FunctionGemma Fine-tuning Dataset Generator
-Generates 520 examples (40 per tool) for function calling training.
-"""
+"""Generate 520 function-calling examples (40 per tool)."""
 
 import json
 import random
+
 
 def generate_dataset(seed=42):
     random.seed(seed)
@@ -64,7 +62,7 @@ def generate_dataset(seed=42):
     
     dataset = []
     
-    # ===== PRODUCTIVITY (200 examples) =====
+    # PRODUCTIVITY (200 examples)
     
     # set_alarm - 40 examples
     set_alarm_data = [
@@ -268,7 +266,7 @@ def generate_dataset(seed=42):
     for query, args in create_calendar_event_data:
         dataset.append(create_example("productivity", query, "create_calendar_event", args))
     
-    # ===== SYSTEM TOOLS (120 examples) =====
+    # SYSTEM TOOLS (120 examples)
     
     # open_app - 40 examples
     open_app_data = [
@@ -382,7 +380,7 @@ def generate_dataset(seed=42):
     for query in get_system_info_data:
         dataset.append(create_example("system", query, "get_system_info", {}))
     
-    # ===== RESEARCH TOOLS (120 examples) =====
+    # RESEARCH TOOLS (120 examples)
     
     # web_search - 40 examples
     web_search_data = [
@@ -522,7 +520,7 @@ def generate_dataset(seed=42):
     for query, args in search_arxiv_data:
         dataset.append(create_example("research", query, "search_arxiv", args))
     
-    # ===== COMMUNICATION TOOLS (80 examples) =====
+    # COMMUNICATION TOOLS (80 examples)
     
     # send_email - 40 examples
     send_email_data = [
@@ -600,16 +598,18 @@ def generate_dataset(seed=42):
 if __name__ == "__main__":
     dataset = generate_dataset()
     
+    # Save under *_original names: fix_dataset.py reconciles these against the
+    # real schemas and writes the canonical file train.py reads.
+    
     # Save as JSON
-    with open("functiongemma_dataset.json", "w", encoding="utf-8") as f:
+    with open("functiongemma_dataset_original.json", "w", encoding="utf-8") as f:
         json.dump(dataset, f, indent=2, ensure_ascii=False)
-    print("Saved: functiongemma_dataset.json")
+    print("Saved: functiongemma_dataset_original.json")
     
     # Save as JSONL
-    with open("functiongemma_dataset.jsonl", "w", encoding="utf-8") as f:
-        for example in dataset:
-            f.write(json.dumps(example, ensure_ascii=False) + "\n")
-    print("Saved: functiongemma_dataset.jsonl")
+    with open("functiongemma_dataset_original.jsonl", "w", encoding="utf-8") as f:
+        f.writelines(json.dumps(example, ensure_ascii=False) + "\n" for example in dataset)
+    print("Saved: functiongemma_dataset_original.jsonl")
     
     # Print summary
     tool_counts = {}

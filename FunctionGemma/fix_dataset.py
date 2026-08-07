@@ -1,22 +1,17 @@
-"""
-Fix functiongemma_dataset.jsonl to match actual Pydantic tool schemas.
+"""Reconcile the generated dataset against the real (Pydantic) tool schemas.
 
-Mismatches found:
-  - send_email:  trained on (recipient, subject?, message?) → actual is (subject, body)
-  - read_emails: trained on ()                             → actual is (count?, filter_type?)
-  - create_calendar_event: missing duration optional
-  - search_arxiv:          missing max_results optional
+Rewrites the developer content to the real schemas and remaps send_email args,
+producing the canonical functiongemma_dataset.jsonl that train.py reads.
 
-This script rewrites the developer content (tool schema lines) and
-remaps send_email assistant-output arg names.
+Pipeline: generate_dataset.py -> fix_dataset.py -> train.py
 """
 
 import json
 
-INPUT  = "functiongemma_dataset.jsonl"
-OUTPUT = "functiongemma_dataset_fixed.jsonl"
+INPUT  = "functiongemma_dataset_original.jsonl"
+OUTPUT = "functiongemma_dataset.jsonl"
 
-# ── Correct schemas (must match get_tool_schemas() output) ──────────────
+# Correct schemas (must match get_tool_schemas() output)
 
 CORRECT_SCHEMAS = {
     "productivity": (
@@ -48,7 +43,7 @@ DEVELOPER_PREFIX = (
     "Available tools:\n"
 )
 
-# ── Helpers ─────────────────────────────────────────────────────────────
+# Helpers
 
 def detect_category(developer_content: str) -> str:
     """Detect which category this example belongs to."""
@@ -73,19 +68,19 @@ def fix_send_email_args(old_args: dict) -> dict:
     new_args = {}
 
     # subject: prefer old "subject", fall back to old "recipient"
-    if "subject" in old_args and old_args["subject"]:
+    if old_args.get("subject"):
         new_args["subject"] = old_args["subject"]
-    elif "recipient" in old_args and old_args["recipient"]:
+    elif old_args.get("recipient"):
         new_args["subject"] = old_args["recipient"]
 
     # body: use old "message" if present
-    if "message" in old_args and old_args["message"]:
+    if old_args.get("message"):
         new_args["body"] = old_args["message"]
 
     return new_args
 
 
-# ── Main ────────────────────────────────────────────────────────────────
+# Main
 
 def main():
     fixed_lines = []
@@ -101,7 +96,7 @@ def main():
             msgs = obj["messages"]
             stats["total"] += 1
 
-            # ── Fix developer content ──
+            # Fix developer content
             dev_msg = msgs[0]
             category = detect_category(dev_msg["content"])
 
@@ -114,7 +109,7 @@ def main():
                 dev_msg["content"] = new_dev
                 stats["developer_fixed"] += 1
 
-            # ── Fix send_email assistant args ──
+            # Fix send_email assistant args
             assistant_msg = msgs[-1]
             parsed = json.loads(assistant_msg["content"])
 

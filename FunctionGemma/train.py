@@ -1,28 +1,28 @@
-import json
-import os
-import math
-import random
 import gc
+import json
+import math
+import os
+import random
 import time
 
 import torch
 from datasets import Dataset
 from transformers import (
-    AutoTokenizer,
     AutoModelForCausalLM,
+    AutoTokenizer,
+    DataCollatorForSeq2Seq,
     Trainer,
     TrainerCallback,
     TrainingArguments,
-    DataCollatorForSeq2Seq,
 )
 
 try:
-    from peft import LoraConfig, get_peft_model, TaskType
+    from peft import LoraConfig, TaskType, get_peft_model
     PEFT_AVAILABLE = True
-except Exception:
-    PEFT_AVAILABLE = False
+except ImportError:
+    PEFT_AVAILABLE = False  # train without LoRA if peft is missing
 
-# ── CONFIG ──────────────────────────────────────────────────────────────
+# Config
 
 MODEL_NAME   = os.getenv("MODEL_NAME", "google/functiongemma-270m-it")
 DATASET_PATH = os.getenv("DATASET_PATH", "functiongemma_dataset.jsonl")
@@ -39,7 +39,7 @@ USE_PEFT   = bool(int(os.getenv("USE_PEFT", "1"))) and PEFT_AVAILABLE
 GEN_MAX_NEW_TOKENS = 64
 
 
-# ── UTILITIES ───────────────────────────────────────────────────────────
+# Utilities
 
 def set_seed(seed: int = 42):
     random.seed(seed)
@@ -58,7 +58,7 @@ def clear_memory():
 set_seed(SEED)
 
 
-# ── DATA ────────────────────────────────────────────────────────────────
+# Data
 
 def load_jsonl_dataset(path: str) -> Dataset:
     records = []
@@ -124,7 +124,7 @@ def preprocess_batch(examples, tokenizer, max_length=MAX_LENGTH):
     return {"input_ids": input_ids_list, "labels": labels_list, "attention_mask": attention_list}
 
 
-# ── CALLBACK ────────────────────────────────────────────────────────────
+# Callback
 
 class EvalPrintCallback(TrainerCallback):
     """Prints validation loss after each epoch."""
@@ -139,7 +139,7 @@ class EvalPrintCallback(TrainerCallback):
         print(f"{'='*50}")
 
 
-# ── GENERATION EVAL ─────────────────────────────────────────────────────
+# Generation Eval
 
 def compute_generation_exact_match(model, tokenizer, dataset, device, max_eval=50):
     """Generate outputs for val examples and check exact string match."""
@@ -179,7 +179,7 @@ def compute_generation_exact_match(model, tokenizer, dataset, device, max_eval=5
     return matches / total if total > 0 else 0.0
 
 
-# ── MAIN ────────────────────────────────────────────────────────────────
+# Main
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -195,7 +195,7 @@ def main():
     print(f"Output : {OUTPUT_DIR}")
     print(f"Config : BS={BATCH_SIZE} ACCUM={GRAD_ACCUM} EPOCHS={EPOCHS} LR={LR:g} PEFT={USE_PEFT}")
 
-    # ── Dataset ──
+    # Dataset
     print(f"\nLoading dataset: {DATASET_PATH}")
     raw_ds = load_jsonl_dataset(DATASET_PATH)
     print(f"Total examples: {len(raw_ds)}")
@@ -206,7 +206,7 @@ def main():
 
     clear_memory()
 
-    # ── Tokenizer ──
+    # Tokenizer
     print("\nLoading tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
 
@@ -215,7 +215,7 @@ def main():
         tokenizer.pad_token_id = tokenizer.eos_token_id
         print("Pad token → EOS")
 
-    # ── Model ──
+    # Model
     print("Loading model...")
     bf16_ok = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
     load_dtype = torch.bfloat16 if bf16_ok else torch.float32
@@ -230,7 +230,7 @@ def main():
 
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
 
-    # ── LoRA ──
+    # LoRA
     if USE_PEFT:
         print("Applying LoRA...")
         lora_config = LoraConfig(
@@ -247,7 +247,7 @@ def main():
 
     clear_memory()
 
-    # ── Tokenize ──
+    # Tokenize
     print("\nTokenizing...")
 
     def _tok(ds, label):
@@ -260,7 +260,7 @@ def main():
     val_tok   = _tok(val_ds, "val")
     print(f"Train: {len(train_tok)} | Val: {len(val_tok)}")
 
-    # ── Training setup ──
+    # Training setup
     effective_bs    = BATCH_SIZE * GRAD_ACCUM
     steps_per_epoch = math.ceil(len(train_tok) / effective_bs)
     total_steps     = steps_per_epoch * EPOCHS
@@ -315,7 +315,7 @@ def main():
         callbacks=[EvalPrintCallback()],
     )
 
-    # ── Train ──
+    # Train
     print(f"\n{'='*60}")
     print("Starting training...")
     print(f"{'='*60}\n")
@@ -328,13 +328,13 @@ def main():
     if train_result and hasattr(train_result, "metrics"):
         print(f"Train loss: {train_result.metrics.get('train_loss', 'n/a')}")
 
-    # ── Save ──
+    # Save
     print("\nSaving model...")
     trainer.save_model(OUTPUT_DIR)
     tokenizer.save_pretrained(OUTPUT_DIR)
     print(f"Saved to: {OUTPUT_DIR}")
 
-    # ── Eval ──
+    # Eval
     print("\nRunning generation exact-match eval...")
     clear_memory()
 
