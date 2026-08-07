@@ -1,6 +1,10 @@
+# ── Virtual environments ──────────────────────────────────────────────
 .venv/
+venv/
+env/
+.conda/
 
-# Python bytecode / caches
+# ── Python bytecode / caches ──────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
@@ -9,35 +13,47 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .cache/
-
-# Jupyter
 .ipynb_checkpoints/
 
-# Local secrets
+# ── Unsloth compiled caches (auto-generated, huge, machine-specific) ──
+unsloth_compiled_cache/
+**/unsloth_compiled_cache/
+
+# ── Local secrets ─────────────────────────────────────────────────────
 .env
 .env.*
+*.local
 
-# Training outputs / large artifacts
-function-gemma/functiongemma-270m-ft/
-function-gemma/merged_model/
-function-gemma/llama-3.2-3B/
-
-# FunctionGemma training outputs
-FunctionGemma/fg_finetuned_ckpt/
-
-# Generic checkpoints (any project)
+# ── Training outputs / checkpoints (any project) ──────────────────────
+output/
+**/output/
+checkpoint-*/
 **/checkpoint-*/
-**/checkpoints/
+runs/
 **/runs/
+wandb/
 
-# Large model / tensor files
+# ── Fine-tuned model weights ──────────────────────────────────────────
 *.safetensors
 *.bin
 *.pt
 *.pth
 *.ckpt
 *.onnx
+*.gguf
 
-# OS/editor noise
+# ── FunctionGemma trained adapter (regenerable via train.py) ──────────
+FunctionGemma/fg_finetuned_ckpt/
+
+# ── HF tokenizer/model caches ─────────────────────────────────────────
+.huggingface/
+hf_cache/
+models--*/
+
+# ── OS / editor noise ─────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.code-workspace

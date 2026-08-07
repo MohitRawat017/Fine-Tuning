@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Fine-Tuning Playground — Python dependencies
+#
+# INSTALL OPTIONS
+#   1. uv (recommended):  uv sync                      # uses pyproject.toml + uv.lock
+#   2. pip (CPU):         pip install -r requirements.txt
+#   3. pip (NVIDIA GPU):  install the CUDA wheels first, then this file:
+#        pip install torch==2.6.0+cu124 torchvision==0.21.0+cu124 \
+#            --index-url https://download.pytorch.org/whl/cu124
+#        pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core ML
+torch>=2.3.0
+torchvision>=0.18.0
+transformers>=4.45.0
+datasets>=3.0.0
+accelerate>=1.0.0
+peft>=0.13.0
+
+# Fine-tuning
+unsloth
+trl>=0.12.0
+bitsandbytes>=0.44.0
+torchao>=0.7.0
+
+# Model card / experiment tooling
+huggingface-hub>=0.26.0
+gradio>=5.0.0
+
+# Data handling
+numpy>=1.26.0
+pandas>=2.2.0
+pyarrow>=17.0.0
+scikit-learn>=1.5.0
+
+# Optional: Windows CUDA 12.4 triton kernel (used by Unsloth on Windows)
+# triton-windows==3.2.0.post21

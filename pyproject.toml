@@ -1,0 +1,43 @@
+[project]
+name = "fine-tuning"
+version = "0.2.0"
+description = "A hands-on showcase of open-weight model fine-tuning: a voice-assistant pipeline from speech-to-text to intent routing, function calling, and empathetic LLM replies."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Fine-Tuning Playground Contributors" },
+]
+keywords = ["fine-tuning", "llm", "lora", "unsloth", "transformers", "peft", "nlp", "voice-assistant"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "accelerate",
+    "bitsandbytes",
+    "datasets",
+    "gradio==5.49.1",
+    "huggingface-hub==0.36.2",
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+    "peft",
+    "pyarrow==18.1.0",
+    "torch==2.6.0+cu124",
+    "torchao==0.13.0",
+    "torchvision==0.21.0+cu124",
+    "transformers==4.53.3",
+    "triton-windows==3.2.0.post21",
+    "trl==0.19.1",
+    "unsloth",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
