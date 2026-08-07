@@ -1,23 +1,22 @@
-"""
-Tsuzi Intent Classification Dataset Generator
-Generates 400 diverse, realistic training examples for voice assistant intent classification.
-"""
+"""Generate 400 seeded voice-assistant queries (80 per intent) for training."""
 
 import json
 import random
 
+
 def generate_dataset(seed=42):
+    """Return a list of {"text", "label", "label_id"} dicts, shuffled."""
     random.seed(seed)
     dataset = []
 
-    # ===== CASUAL (80 examples) - label_id: 0 =====
+    # Casual (80)
     casual_voice = [
         # Greetings
         "hey tsuzi", "hi there", "hello", "hey", "yo", "hiya", "howdy",
         "good morning", "good afternoon", "good evening", "morning", "evening",
         "what's up", "sup", "greetings", "um hey", "uh hi", "hey um",
         "oh hey there", "ah good morning", "well hello", "so hey",
-        
+
         # Small talk
         "how are you doing today", "how's it going", "how you been",
         "what's going on", "how's your day been", "how have you been",
@@ -27,7 +26,7 @@ def generate_dataset(seed=42):
         "long time no talk", "nice to see you again", "good to hear you",
         "missed talking to you", "hey it's been a while", "so uh how are you",
         "um how's it going", "well how have you been", "oh what's new",
-        
+
         # Short replies
         "ok", "okay", "k", "yes", "yeah", "yea", "yep", "yup",
         "nah", "nope", "sure", "alright", "aight", "cool", "nice",
@@ -35,28 +34,27 @@ def generate_dataset(seed=42):
         "uh huh", "hmm", "oh okay", "wow", "oops", "ouch", "phew",
         "brb", "ttyl", "np", "ty", "that's fine", "sounds good",
         "um ok", "uh sure", "yeah um", "oh alright", "well sure",
-        
+
         # Thanks
         "thanks", "thank you", "thank you so much", "thanks a lot",
         "thanks a bunch", "much appreciated", "I appreciate it",
         "you're the best", "cheers", "thx", "um thanks", "thank u",
-        
-        # Dismissals/Closings
+
+        # Dismissals / closings
         "never mind", "forget it", "it's fine really", "don't worry about it",
         "all good", "no worries", "it's okay", "just leave it",
         "doesn't matter", "skip it", "bye", "goodbye", "see you",
         "see ya", "talk to you later", "catch you later", "peace out",
         "take care", "have a good one", "later", "um never mind",
-        "uh forget it", "oh bye", "well anyway", "so yeah bye"
+        "uh forget it", "oh bye", "well anyway", "so yeah bye",
     ]
-    
-    casual_all = casual_voice[:80]
-    for text in casual_all:
+
+    for text in casual_voice[:80]:
         dataset.append({"text": text, "label": "casual", "label_id": 0})
 
-    # ===== PRODUCTIVITY (80 examples) - label_id: 1 =====
+    # Productivity (80)
     productivity_voice = [
-        # set_timer - conversational with hesitations
+        # set_timer — conversational with hesitations
         "can you set a timer for like 5 minutes", "hey um start a timer for 10 minutes please",
         "I need a timer for about 15 minutes", "could you start timing 20 minutes for me",
         "um set a timer for 25 minutes", "start a 30 minute timer would you",
@@ -66,8 +64,8 @@ def generate_dataset(seed=42):
         "begin a 15 minute countdown", "set timer to 20 minutes",
         "please time 30 minutes", "let's do a timer for 45 minutes",
         "timer uh 5 minutes", "start timmer for 20 min", "countdown 15 min please",
-        
-        # set_alarm - conversational
+
+        # set_alarm
         "can you wake me up at 7 tomorrow", "hey um set an alarm for 6:30 in the morning",
         "I need an alarm at 8 am please", "could you set my alarm for 5:30",
         "um alarm for 7am tomorrow", "set a morning alarm for 9",
@@ -77,8 +75,8 @@ def generate_dataset(seed=42):
         "set alarm seven thirty", "wake me at 6am",
         "alarm for quarter to 9", "need alarm for early tomorrow",
         "um set alram for 7am", "uh wake me up at 6", "wak me up at 7",
-        
-        # create_calendar_event - conversational
+
+        # create_calendar_event
         "can you create a meeting at 3 today", "hey um schedule a call with the team",
         "I need to add an event to my calendar", "could you book a meeting for tomorrow",
         "um set up a meeting at 2pm", "I have a meeting at 4 please add it",
@@ -89,8 +87,8 @@ def generate_dataset(seed=42):
         "schedule a sync for Friday", "create calendar entry for 3pm",
         "creat meeting at 3pm", "schedle call with team", "book meting tomorrow",
         "prepone meeting to 2pm", "prepone my call to 3",
-        
-        # add_task - conversational
+
+        # add_task
         "can you add a task to buy groceries", "hey um new task call my mom",
         "I need to remember to finish the report", "could you add task review the code",
         "um add to my tasks email the client", "create a task for tomorrow",
@@ -101,8 +99,8 @@ def generate_dataset(seed=42):
         "add this task write a blog post", "create todo water the plants",
         "add taks buy groceries", "new tsk call dad", "um task review code",
         "kindly add task", "do the needful and set timer",
-        
-        # get_tasks - conversational
+
+        # get_tasks
         "can you show me my tasks", "hey um what are my todos",
         "I need to see my task list", "could you list my tasks please",
         "um show me what I need to do", "what's on my todo list",
@@ -112,15 +110,15 @@ def generate_dataset(seed=42):
         "view my tasks", "check my todo list",
         "what do I have to do", "show me my list",
         "show my taks please", "wat are my todos", "my task list",
-        "revert back with my tasks"
+        "revert back with my tasks",
     ]
-    
+
     for text in productivity_voice[:80]:
         dataset.append({"text": text, "label": "productivity", "label_id": 1})
 
-    # ===== SYSTEM (80 examples) - label_id: 2 =====
+    # System (80)
     system_voice = [
-        # open_app - conversational
+        # open_app
         "can you open vscode for me", "hey um launch chrome",
         "I need you to start spotify", "could you open the terminal",
         "um launch firefox please", "start slack for me",
@@ -137,8 +135,8 @@ def generate_dataset(seed=42):
         "start command prompt", "um open vs code",
         "uh launch chrome", "hey open terminal",
         "can you um open spotify", "open code editor please",
-        
-        # run_command - conversational
+
+        # run_command
         "can you run pip install requests", "hey um execute npm start",
         "I need you to run this command", "could you execute git status",
         "um run python script.py", "execute ls -la please",
@@ -156,8 +154,8 @@ def generate_dataset(seed=42):
         "excecute npm start", "uh run this command",
         "excute git status", "run pythn script",
         "do the needful and run", "kindly execute this",
-        
-        # get_system_info - conversational
+
+        # get_system_info
         "can you show system info", "hey um what's my cpu usage",
         "I need to see memory usage", "could you check disk space",
         "um what's my battery status", "what's my ip address",
@@ -173,13 +171,13 @@ def generate_dataset(seed=42):
         "what are my computer specs", "check the system",
         "systm info please", "cpu usge", "show mem usage",
         "disk spce check", "batery status", "whats my ip",
-        "kindly show system info", "revert with cpu usage"
+        "kindly show system info", "revert with cpu usage",
     ]
-    
+
     for text in system_voice[:80]:
         dataset.append({"text": text, "label": "system", "label_id": 2})
 
-    # ===== RESEARCH (80 examples) - label_id: 3 =====
+    # Research (80)
     research_voice = [
         # web_search
         "can you search for python tutorials", "hey um search how to make pasta",
@@ -198,7 +196,7 @@ def generate_dataset(seed=42):
         "search for coding interview questions", "find information about ai",
         "look up typescript documentation", "um search for python",
         "uh look up javascript", "hey find info on",
-        
+
         # search_stackoverflow
         "can you search stackoverflow for null pointer exception",
         "hey um find stackoverflow results for react error",
@@ -219,7 +217,7 @@ def generate_dataset(seed=42):
         "find stackoverflow solution for slow query", "can you um search stackoverflow",
         "search stackover flow for error", "find stackoverflow for null error",
         "look up stack overflow", "search stakoverflow for bug",
-        
+
         # search_arxiv
         "can you find papers on neural networks", "hey um search arxiv for transformer models",
         "I need research papers about computer vision",
@@ -237,13 +235,13 @@ def generate_dataset(seed=42):
         "find papers about self supervised learning", "look up arxiv for vision transformers",
         "search arxiv for papers", "find arxiv papers on", "look up arxiv",
         "find papers on arxiv", "kindly search for this",
-        "do the needful and search", "revert with search results"
+        "do the needful and search", "revert with search results",
     ]
-    
+
     for text in research_voice[:80]:
         dataset.append({"text": text, "label": "research", "label_id": 3})
 
-    # ===== COMMUNICATION (80 examples) - label_id: 4 =====
+    # Communication (80)
     communication_voice = [
         # send_email
         "can you send an email to john", "hey um email sarah about the meeting",
@@ -269,7 +267,7 @@ def generate_dataset(seed=42):
         "um send email to john", "uh mail sarah", "hey email boss",
         "can you um send mail", "send mail fast", "email na",
         "kindly send email", "do the needful and send mail",
-        
+
         # read_emails
         "can you check my emails", "hey um read my latest mail",
         "I need to see my inbox", "could you show my emails",
@@ -294,33 +292,30 @@ def generate_dataset(seed=42):
         "um check my emails", "uh read my mail", "show my mails",
         "check email pls", "read latest mail", "show inbox",
         "kindly check emails", "revert back via email",
-        "prepone and inform via mail"
+        "prepone and inform via mail",
     ]
-    
+
     for text in communication_voice[:80]:
         dataset.append({"text": text, "label": "communication", "label_id": 4})
 
-    # Shuffle the entire dataset
+    # Shuffle for a mixed label stream in each split.
     random.shuffle(dataset)
-    
     return dataset
 
 
 if __name__ == "__main__":
     dataset = generate_dataset()
-    
-    # Save as JSON
-    with open("tsuzi_intent_dataset.json", "w", encoding="utf-8") as f:
-        json.dump(dataset, f, indent=2, ensure_ascii=False)
-    print("Saved: tsuzi_intent_dataset.json")
-    
-    # Save as JSONL (recommended for ML training)
-    with open("tsuzi_intent_dataset.jsonl", "w", encoding="utf-8") as f:
-        for item in dataset:
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
-    print("Saved: tsuzi_intent_dataset.jsonl")
-    
-    # Print summary
+
+    # Save as JSON (readable) and JSONL (what train_minilm.py loads).
+    with open("dataset.json", "w", encoding="utf-8") as fh:
+        json.dump(dataset, fh, indent=2, ensure_ascii=False)
+    print("Saved: dataset.json")
+
+    with open("dataset.jsonl", "w", encoding="utf-8") as fh:
+        fh.writelines(json.dumps(item, ensure_ascii=False) + "\n" for item in dataset)
+    print("Saved: dataset.jsonl")
+
+    # Print a summary so you can verify balance at a glance.
     print("\n" + "=" * 50)
     print("DATASET SUMMARY")
     print("=" * 50)
